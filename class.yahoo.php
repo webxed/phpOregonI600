@@ -5,8 +5,6 @@
 	require_once('config.php');
 	require_once('cache.php');
 
-	require_once('lang_trans.php');
-	
 	class cYahooWeather
 	{
 		var $bCacheEnabled   = false;
@@ -173,9 +171,6 @@
 			{
 				foreach($tYahooData->query->results->place AS $tPlaceEntry)
 				{
-					//$tReturn[$tPlaceEntry->woeid] = iconv('UTF-8', 'windows-1251', $tPlaceEntry->name);
-					//$tReturn[$tPlaceEntry->woeid] = iconv('UTF-8', 'windows-1251', $tPlaceEntry->name);
-			
 					$tReturn[$tPlaceEntry->woeid] = $tPlaceEntry->name;
 				}
 			}		
